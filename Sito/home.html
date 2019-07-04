@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <title>Il piccolo principe</title>
+
+    <meta charset="utf-8">
+    <meta name=”description” content="Pagina home di un sito sulla storia del piccolo principe e il suo autore">
+    <meta name=”keywords” content="piccolo principe Antoine Saint Euxpery rosa aviatore">
+    <meta name="author" content="Carolina Sgherri">
+
+    <link rel="shortcut icon" type="image/png" href="./icon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <!--icone-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <script src="funzioni.js"></script>
+  </head>
+
+  <body>
+    <!--Barra di scorrimento-->
+    <header>
+      <div id="barra_progresso"></div>
+    </header>
+    <!--Men&#249; barre laterali-->
+    <nav id="nav" class="nascondiMenu">
+      <a href="home.html"           id="home"          class="selezionata">
+        <span class="menu" >Home <i class="fas fa-home"></i> </span>
+      </a>
+      <a href="personaggi.html"     id="personaggi"    class="deselezionata">
+        <span class="menu" >Personaggi</span>
+      </a>
+      <a href="ambientazioni.html"  id="ambientazioni" class="deselezionata">
+        <span class="menu" >Ambientazioni</span>
+      </a>
+      <a href="giochiamo.html"      id="giochiamo"     class="deselezionata">
+        <span class="menu" >Puzzle <i class="fas fa-puzzle-piece"></i> </span>
+      </a>
+      <a href="about.html"          id="about"         class="deselezionata">
+        <span class="menu" >About</span>
+      </a>
+    </nav>
+
+    <!--Per aprire il men&#249; quando la pagina è piccola-->
+    <a href="#nav"> <i id="mini" class="fas fa-bars mini"></i></a>
+
+    <!--Freccia per tornare in alto-->
+    <a href="#"><i id="up" class="fas fa-arrow-alt-circle-up"></i></a>
+
+    <img src="./images/alto_destra.png" id="alto_destra" alt="stelle">
+    <img src="./images/alto_sinistra.png" id="alto_sinistra" alt="stelle">
+
+    <blockquote>
+      Non si vede bene che con il cuore. L’essenziale &#232; invisibile agli occhi
+      <span>- La volpe</span>
+    </blockquote>
+
+    <article>
+      <h1>Il libro</h1>
+      <p>
+        &#201; il racconto pi&#249; conosciuto della produzione letteraria di Antoine de Saint-Exup&#233;ry.
+        La storia &#232; stata votata come miglior libro del 20° secolo in Francia ed &#232; una delle opere letterarie pi&#249; vendute della storia.
+        <br>
+        L'autore lo scrisse negli Stati Uniti e qua venne anche pubblicato il 6 aprile del 1943 a New York da Reynal & Hitchcock.
+        Solamente nel 1945 (dopo la scomparsa dell'autore) fu pubblicato in Francia, a Parigi da Gallimard.
+        <br>
+        Il libro &#232; dedicato all'amico dell'autore L&#233;on Werth.
+        <br>
+        La storia affronta temi fondamentali come il senso della vita e il significato dell'amore e dell'amicizia.
+        Ogni capitolo narra un incontro del piccolo principe con un personaggio diverso che rappresenta un'allegoria o uno stereotipo della societ&#224; moderna e contemporanea.
+        <br>
+        L'opera &#232; stata illustrata dall'utore stesso attraverso una decina di acquerelli naïf.
+        I disegni sono stati inolre utilizzati come copertine per il libro.
+      </p>
+    </article>
+
+    <img src="./images/asteroide_baobab.png" id="destra_centrale" alt="asteroide con baobab">
+
+    <blockquote>
+      Amare &#232; donare tutto se stesso senza nulla chiedere amare &#232; non dire mai... mi devi.
+      <span>- Il piccolo principe</span>
+    </blockquote>
+
+    <article id="article_timeline">
+      <h1>L'autore</h1>
+      <div class="timeline">
+        <div class="contenitore sinistra">
+          <div class="content">
+            <h2>1900</h2>
+            <p class="testo_contenitori">
+              Antoine de Saint-Exup&#233;ry &#232; nato a Lione il 29 giugno del 1900 da una
+              famiglia di nobili origini. Perse il padre a quattro anni e per questo
+              fu cresciuto dalla madre.
+              Frequent&#242; il collegio gesuita di Notre-Dame de Sainte-Croix.
+              <iframe class="mappa_timeline"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191495.3006749287!2d4.791128860611849!3d45.74662931609376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon%2C+France!5e0!3m2!1sen!2sit!4v1559827190753!5m2!1sen!2sit"frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+        <div class="contenitore destra">
+          <div class="content">
+            <h2>1926</h2>
+            <p class="testo_contenitori">
+              Dopo essersi arruolato nel II reggimento di aviazione di
+              Strasburgo e aver preso il brevetto di pilota civile e militare,
+              nel 1926 viene assunto come pilota per trasportare la posta.
+            </p>
+          </div>
+        </div>
+        <div class="contenitore sinistra">
+          <div class="content">
+            <h2>1929</h2>
+            <p class="testo_contenitori">
+              Pubblica il suo primo libro intitolato il corriere del Sud.
+              <br>
+              <img src="./images/corriere_sud.jpg" alt="Copertina del libro corriere del sud" class="contenuto_timeline">
+            </p>
+          </div>
+        </div>
+        <div class="contenitore destra">
+          <div class="content">
+            <h2>1931</h2>
+            <p class="testo_contenitori">
+              Si sposa con Consuelo Suncín-Sandoval Zece&#241;a de Gómez,
+              scrittrice, pittrice e artista salvadoregna.
+            </p>
+          </div>
+        </div>
+        <div class="contenitore sinistra">
+          <div class="content">
+            <h2>1935</h2>
+            <p class="testo_contenitori">
+              Decise di tentare il raid aereo Parigi-Saigon, ma fin&#236; con il
+              rimanere bloccato nel deserto libico, da dove  tratto in salvo
+              dagli aerei della Regia Aeronautica basati a Derna.
+            </p>
+          </div>
+        </div>
+        <div class="contenitore destra">
+          <div class="content">
+            <h2>1939</h2>
+            <p class="testo_contenitori">
+              Nel 1939 pubblica Terra degli uomini e si arruola nell'Arm&#233;e de
+              l'air dove viene impiegato in una squadriglia di ricognizione
+              aerea.
+              <br>
+              <img src="./images/terra_uomini.jpg" alt="Copertina del libro terra degli uomini" class="contenuto_timeline">
+            </p>
+          </div>
+        </div>
+        <div class="contenitore sinistra">
+          <div class="content">
+            <h2>1942</h2>
+            <p class="testo_contenitori">
+              Dopo che un grave incidente che lo costrinse a riparare a
+              New York chiede di essere arruolato nell'aviazione americana,
+              per tornare in Francia volando.
+              <iframe class="mappa_timeline" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799254849!2d-74.25987873571059!3d40.697670061764555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sit!4v1559827362146!5m2!1sen!2sit" frameborder="0"  allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+        <div class="contenitore destra">
+          <div class="content">
+            <h2>1943</h2>
+            <p class="testo_contenitori">Pubblica il piccolo principe.
+            <br>
+            <img src="./images/piccolo_principe_copertina.jpg" alt="Copertina del libro piccolo principe" class="contenuto_timeline">
+            </p>
+          </div>
+        </div>
+
+        <div class="contenitore sinistra">
+          <div class="content">
+            <h2>1944</h2>
+            <p class="testo_contenitori">
+              Durante una missione di ricongnizione precipit&#242; in mare e mor&#236;.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+  <blockquote>
+    &#200; una follia condannare tutte le amicizie perch&#233; una ti ha tradito,
+    non credere in nessun amore solo perch&#233; uno di loro &#232; stato infedele,
+    buttate via tutte le possibilit&#224; di essere felici solo perch&#233; qualcosa
+    non &#232; andato per il verso giusto.
+    <br>
+    Ci sar&#224; sempre un’altra opportunit&#224;, un’altra amicizia, un altro amore, una nuova forza.
+    Per ogni fine c’&#232; un nuovo inizio.
+    <span>- Il piccolo principe</span>
+  </blockquote>
+
+  <img src="./images/pianeta_elefanti.png" id="sinistra_centrale" alt="pianeta con elefanti">
+
+  <article>
+    <h1>Il film</h1>
+    <p>
+      Al libro &#232; stato ispirato un omonimo film d'animazione nel 2015 diretto da Mark Osborne.
+      Il film alle vicende del libro intreccia una trama moderna e attuale che d&#224; maggiore risalto ai concetti al raconto di Antoine de Saint-Exup&#233;ry.
+      <br>
+      Il film &#232; stato realizzato usando le tecniche del CGI e dello stop motion. L'animazione &#232; stata realizzata dallo studio Mikros Image.
+      <br>
+      La pellicola venne al Festival di Cannes del 2015 ed &#232; stata distribuita nelle sale cinematografiche solamente dal 2016.
+      Nel 2016 ha vinto il Premio C&#233;sar come Miglior film d'animazione.
+      Viene considerato il film d'animazione francese di maggior successo all'estero di tutti i tempi.
+      <br>
+      La colonna sonora del film &#232; stata composta da Hans Zimmer e Richard Harvey.
+      </p>
+    </article>
+
+    <blockquote>
+      Che si tratti di una casa, delle stelle o del deserto, quello che fa la loro bellezza &#232; invisibile..
+      <span>- L'aviatore</span>
+    </blockquote>
+
+    <img src="./images/footer_sinistra.png" id="basso_sinistra" alt="volpe">
+    <img src="./images/footer_destra.png" id="basso_destra" alt="il piccolo principe">
+
+  </body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <title>Il piccolo principe</title>
+
+    <meta charset="utf-8">
+    <meta name=”description” content="Pagina contenente un puzzle in un sito sulla storia del piccolo principe e il suo autore">
+    <meta name=”keywords” content="piccolo principe Antoine Saint Euxpery rosa aviatore">
+    <meta name="author" content="Carolina Sgherri">
+
+    <link rel="shortcut icon" type="image/png" href="./icon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <!--icone-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <script src="funzioni.js"></script>
+  </head>
+
+  <body>
+    <!--Menù barre laterali-->
+    <nav id="nav">
+      <a href="home.html"           id="home"          class="deselezionata">
+        <span class="menu" >Home <i class="fas fa-home"></i> </span>
+      </a>
+      <a href="personaggi.html"     id="personaggi"    class="deselezionata">
+        <span class="menu" >Personaggi</span>
+      </a>
+      <a href="ambientazioni.html"  id="ambientazioni" class="deselezionata">
+        <span class="menu" >Ambientazioni</span>
+      </a>
+      <a href="giochiamo.html"      id="giochiamo"     class="selezionata">
+        <span class="menu" >Puzzle <i class="fas fa-puzzle-piece"></i> </span>
+      </a>
+      <a href="about.html"          id="about"         class="deselezionata">
+        <span class="menu" >About</span>
+      </a>
+    </nav>
+
+    <!--Per aprire il menù quando la pagina è piccola-->
+    <a href="#nav"> <i id="mini" class="fas fa-bars mini"></i></a>
+
+    <h1>Puzzle</h1>
+    <div class="div_puzzle" id="div_puzzle">
+
+      <div class="div_img">
+        <table>
+          <tr>
+            <td><img src="./images/puzzle/0.png" alt="Pezzo 1 dell'immagine di riferimento"></td>
+            <td><img src="./images/puzzle/1.png" alt="Pezzo 2 dell'immagine di riferimento"></td>
+            <td><img src="./images/puzzle/2.png" alt="Pezzo 3 dell'immagine di riferimento"></td>
+          </tr>
+          <tr>
+            <td><img src="./images/puzzle/3.png" alt="Pezzo 4 dell'immagine di riferimento"></td>
+            <td><img src="./images/puzzle/4.png" alt="Pezzo 5 dell'immagine di riferimento"></td>
+            <td><img src="./images/puzzle/5.png" alt="Pezzo 6 dell'immagine di riferimento"></td>
+          </tr>
+          <tr>
+            <td><img src="./images/puzzle/6.png" alt="Pezzo 7 dell'immagine di riferimento"></td>
+            <td><img src="./images/puzzle/7.png" alt="Pezzo 8 dell'immagine di riferimento"></td>
+            <td><img src="./images/puzzle/8.png" alt="Pezzo 9 dell'immagine di riferimento"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="div_img">
+        <table>
+          <tr>
+            <td id="0"><img src="./images/puzzle/0.png" alt="Pezzo 1 del puzzle" id="img0"></td>
+            <td id="1"><img src="./images/puzzle/1.png" alt="Pezzo 2 del puzzle" id="img1"></td>
+            <td id="2"><img src="./images/puzzle/2.png" alt="Pezzo 3 del puzzle" id="img2"></td>
+          </tr>
+          <tr>
+            <td id="3"><img src="./images/puzzle/3.png" alt="Pezzo 4 del puzzle" id="img3"></td>
+            <td id="4"><img src="./images/puzzle/4.png" alt="Pezzo 5 del puzzle" id="img4"></td>
+            <td id="5"><img src="./images/puzzle/5.png" alt="Pezzo 6 del puzzle" id="img5"></td>
+          </tr>
+          <tr>
+            <td id="6"><img src="./images/puzzle/6.png" alt="Pezzo 7 del puzzle" id="img6"></td>
+            <td id="7"><img src="./images/puzzle/7.png" alt="Pezzo 8 del puzzle" id="img7"></td>
+            <td id="8"><img src="./images/puzzle/8.png" alt="Pezzo 9 del puzzle" id="img8"></td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+    <div id="frecce">
+      <input type="button" value="Nuova partita" id="nuova_partita">
+      <input type="button" value="&larr;" id="sinistra">
+      <input type="button" value="&uarr;" id="su">
+      <input type="button" value="&rarr;" id="destra">
+      <input type="button" value="&darr;" id="giu">
+      <input type="button" value="Regole" id="regole">
+    </div>
+
+    <div id="modal">
+      <div id="modal-contenuto">
+        <span id="croce" class="far fa-times-circle"></span>
+        <p>
+          Congratulazioni, hai vinto!
+          <br> <i class="fas fa-glass-cheers"></i> <i class="fas fa-trophy"></i>
+        </p>
+      </div>
+    </div>
+
+    <div id="modalRegole">
+      <div id="modal-contenutoRegole">
+        <span id="croce2" class="far fa-times-circle"></span>
+        <p>
+          Regole del gioco
+          <br>
+          <span id="comune">
+              Per iniziare a giocare si deve premere il tasto "Nuova partita".
+              Il puzzle va risolto spostando i quadrati che compongono il puzzle
+              stesso con l'aiuto dei tasti con le frecce (&larr;, &uarr;, &rarr; e &darr;).
+              Il gioco si vince una volta che il puzzle è uguale all'immagine di riferimento sulla sinistra.
+          </span>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>

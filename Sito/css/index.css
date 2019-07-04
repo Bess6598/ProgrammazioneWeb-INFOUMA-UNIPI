@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+body {
+  background-color: #f2f8f4;
+  padding: 0;
+  margin: 0;
+}
+
+#alto_sinistra{
+  /*dimensione*/
+  height: 10%;
+  width: 10%;
+  /*posizione*/
+  float: left;
+  z-index: -1;
+}
+#alto_destra{
+  /*dimensione*/
+  height: 15%;
+  width: 15%;
+  /*posizione*/
+  float: right;
+  z-index: -1;
+}
+#basso_sinistra{
+  /*dimensione*/
+  height: 15%;
+  width: 10%;
+  /*posizione*/
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#basso_destra{
+  /*dimensione*/
+  height: 45%;
+  width: 40%;
+  min-height: 44%;
+  min-width: 39%;
+  /*posizione*/
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+h1 {
+  /*aspetto*/
+  font-family: 'Pacifico', cursive;
+  background-image: url(https://media.giphy.com/media/ygAaR0n5RsyAM/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  /*dimensione*/
+  width: 100%;
+  font-size: 500%;
+  /*posizione*/
+  text-align:center;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 3%;
+  z-index: 1;
+  /*ombra*/
+  /*text-shadow: #FC0 1px 0 10px;*/
+}
+
+@media screen and (max-height: 400px){
+
+  h1 { font-size: 200%; }
+
+  #alto_sinistra{
+    /*dimensione*/
+    height: 5%;
+    width: 5%;
+  }
+  #alto_destra{
+    /*dimensione*/
+    height: 7%;
+    width: 7%;
+  }
+  #basso_sinistra{
+    /*dimensione*/
+    height: 10%;
+    width: 5%;
+  }
+  #basso_destra{
+    /*dimensione*/
+    height: 0%;
+    width: 0%;
+    min-height: 0%;
+    min-width: 0%;
+  }
+}
+
+@media screen and (max-width: 410px){
+
+  h1 { font-size: 900%; }
+
+  #alto_sinistra{
+    /*dimensione*/
+    height: 0%;
+    width: 0%;
+  }
+  #alto_destra{
+    /*dimensione*/
+    height: 0%;
+    width: 0%;
+  }
+  #basso_sinistra{
+    /*dimensione*/
+    height: 0%;
+    width: 0%;
+  }
+  #basso_destra{
+    /*dimensione*/
+    height: 45%;
+    width: 100%;
+    min-height: 44%;
+    min-width: 39%;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  h1 { font-size: 400%; }
+
+  #alto_sinistra{
+    /*dimensione*/
+    height: 10%;
+    width: 10%;
+  }
+  #alto_destra{
+    /*dimensione*/
+    height: 0%;
+    width: 0%;
+  }
+  #basso_sinistra{
+    /*dimensione*/
+    height: 0%;
+    width: 0%;
+  }
+  #basso_destra{
+    /*dimensione*/
+    height: 55%;
+    width: 85%;
+    min-height: 44%;
+    min-width: 39%;
+  }
+}
