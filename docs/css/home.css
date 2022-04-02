@@ -1,0 +1,1045 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap');
+
+:root {
+  --light-green: #f2f8f4;
+  --dark-green: #c0ddca;
+  --very-dark-green: #334d33;
+  --pink: #DDC0D3;
+  --dark-pink: #c18daf;
+  --light-grey: rgba(0,0,0,0.4);
+  --dark-grey: #444;
+  --mostly-white: #fefefe;
+}
+
+/*il colore di cui si evidenzia il testo selezionato*/
+::selection {
+  background: var(--very-dark-green);
+  color: white;
+}
+
+.numeri { speak-as: digits; }
+
+html {
+  scroll-behavior: smooth;
+  /*speech module*/
+  voice-family: "male";
+  voice-volume: medium;
+  voice-rate: medium;
+  voice-stress: moderate;
+  speak: always;
+}
+
+body {
+  background-color: var(--light-green);
+  padding: 0;
+  margin: 0;
+}
+
+/*barra di scorrimento*/
+header {
+  /*posizione*/
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  /*dimensione*/
+  width: 100%;
+  /*colore della barra di scorrimenot vuota*/
+  background-color: var(--dark-green);
+}
+
+#barra_progresso {
+  height: 10px;
+  background: var(--pink);
+  width: 0%;
+}
+
+/*il menu*/
+#nav a {
+  position: fixed;
+  left: -135px;
+  transition: 0.5s;
+  padding: 15px;
+  padding-right: 50px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  z-index: 2;
+}
+
+#nav a:hover { left: 0; }
+
+.menu {
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.mini { visibility: hidden; }
+
+.miniTimes { visibility: hidden; }
+
+#nav a:hover .menu { visibility: visible; }
+
+.selezionata { background-color: var(--dark-green); }
+
+.deselezionata { background-color: var(--pink); }
+
+.nascondiMenu { display: block; }
+
+#home { top: 20px; }
+
+#personaggi { top: 80px; }
+
+#ambientazioni { top: 140px; }
+
+#giochiamo { top: 200px; }
+
+#about { top: 260px;}
+
+/*freccia*/
+#up{
+  /*posizione*/
+  position: fixed;
+  z-index: 2;
+  bottom: 20px;
+  right: 15px;
+  /*aspetto*/
+  font-size: 50px;
+  opacity: 0.7;
+  color: var(--very-dark-green);
+  transition: color 0.5s ease-in-out;
+}
+#up:hover { color: black; }
+
+article {
+  /*dimensione*/
+  margin: 10%;
+  padding: 5%;
+  /*aspetto*/
+  opacity: 0.8;
+  background-color: var(--light-green);
+  border-radius: 10%;
+}
+
+article > p {
+  font-size: 110%;
+}
+
+h1 {
+  /*aspetto*/
+  font-family: 'Roboto', sans-serif;
+  /*dimensione*/
+  width: 100%;
+  font-size: 300%;
+  /*bordi*/
+  border-bottom: 3px solid  var(--dark-grey);
+  border-top: 3px solid  var(--dark-grey);
+  /*posizione*/
+  text-align:center;
+  letter-spacing: 2px;
+}
+
+/*citazioni*/
+blockquote {
+  /*posizione-dimensione*/
+  width:60%;
+  margin:50px auto;
+  position: relative;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  /*aspetto*/
+  font-size: 190%;
+  font-family: 'La Belle Aurore', cursive;
+  color: #555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid var(--dark-green);
+  line-height:1.6;
+  background:#f6f6f6;
+  /*speech module*/
+  voice-family: "female";
+  voice-volume: soft;
+  voice-rate: slow;
+  voice-stress: strong;
+}
+
+blockquote::selection {
+  background-color: var(--dark-green);
+  color: black;
+}
+
+/*virgolette giganti*/
+blockquote::before {
+  /*aspetto*/
+  font-family:'FontAwesome';
+  content: open-quote;
+  color:var(--dark-green);
+  /*posizione-dimensione*/
+  font-size: 90px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote span {
+  /*posizione-dimensione*/
+  display:block;
+  font-size: 75%;
+  /*aspetto*/
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5px;
+}
+
+/*immagini di sfondo*/
+#alto_sinistra {
+  /*dimensione*/
+  height: 10%;
+  width: 10%;
+  /*posizione*/
+  float: left;
+  z-index: -1;
+}
+#alto_destra {
+  /*dimensione*/
+  height: 15%;
+  width: 15%;
+  /*posizione*/
+  float: right;
+  z-index: -1;
+}
+#destra_centrale{
+  /*dimensione*/
+  height: 110%;
+  width: 60%;
+  /*posizione*/
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+#sinistra_centrale{
+  /*dimensione*/
+  height: 80%;
+  width: 60%;
+  /*posizione*/
+  position: absolute;
+  float: left;
+  z-index: -1;
+}
+#basso_sinistra{
+  /*dimensione*/
+  height: 45%;
+  width: 40%;
+  min-height: 44%;
+  min-width: 39%;
+  /*posizione*/
+  position: absolute;
+  left: 0;
+}
+#basso_destra{
+  /*dimensione*/
+  height: 45%;
+  width: 40%;
+  min-height: 44%;
+  min-width: 39%;
+  /*posizione*/
+  position: absolute;
+  right: 0;
+}
+
+/*timeline*/
+/* la linea verticale */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--very-dark-green);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* I quadretti */
+.contenitore {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+/*il testo si vede solo quando passi sopra i contenitori*/
+.testo_contenitori {
+  display: none;
+  font-size: 105%;
+}
+
+.content:hover .testo_contenitori {
+  display: inline;
+  -webkit-animation: slide-down 1s ease-in-out;
+  -moz-animation: slide-down 1s ease-in-out;
+}
+
+@-webkit-keyframes slide-down {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+      }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes slide-down {
+      0% {
+        opacity: 0;
+        -moz-transform: translateY(100%);
+      }
+    100% {
+      opacity: 1;
+      -moz-transform: translateY(0);
+    }
+}
+
+/* Il testo nei quadretti */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  align-content: center;
+}
+
+/* I cerchietti sulla linea */
+.contenitore::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: -17px;
+  background-color: var(--light-green);
+  top: 15px;
+  border-style: solid;
+  border-width: medium;
+  border-color: var(--very-dark-green);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Posizione cerchietti per i contenitori di destra */
+.destra::after { left: -16px; }
+
+/* Posizione contenitori di sinistra */
+.sinistra { left: -80px; }
+
+/* Posizione contenitori di destra */
+.destra { left: 50%; }
+
+/*immagini contenute all'interno della timeline*/
+.contenuto_timeline {
+   width: 60%;
+   height: 350px;
+   padding-left: 10%;
+}
+
+/*mape contenute nella timeline*/
+.mappa_timeline {
+   width: 100%;
+   height: 300px;
+}
+
+/*icone pagina about*/
+.icon {
+  /*aspetto*/
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 50px;
+  /*testo*/
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  /*bordo*/
+  border-radius: 50%;
+  border: 2px solid white;
+  /*colore*/
+  background-color: var(--dark-grey);
+  color: white;
+  /*posizione*/
+  margin: 5px;
+  /*transizioni*/
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover, a:hover .icon {
+  /*bordo*/
+  border: 2px solid var(--dark-grey);
+  /*colore*/
+  background-color: white;
+  color: var(--dark-grey);
+}
+
+/*link pagina about*/
+a {
+  text-decoration: none;
+  color: black;
+  /*transizioni*/
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+   text-decoration: underline;
+   text-decoration-style: dotted;
+}
+
+/* contenitore frecce pagina giochi*/
+#frecce {
+  left: 3px;
+  margin-top: 2px;
+  display: flex;
+  margin-bottom: 1%;
+  flex-wrap: wrap;
+}
+
+/*contenitore del puzzle e immagine di riferimento*/
+#contenitore {
+  width: 750px;
+  position: relative;
+  margin: 50px auto;
+}
+
+/*pagina ambientazione le carte*/
+.contenuto {
+	width: 450px;
+  height: 360px;
+  perspective: 1000;
+}
+
+.carta {
+  width: 450px;
+  height: 360px;
+	border: 8px solid white;
+  /*transizione*/
+	transform-style: preserve-3d; /*modalità di rendering della trasformazione*/
+	transition-duration: 2s;
+}
+
+.contenuto:hover .carta { transform: rotateY(180deg); }
+
+.lato {
+  position: absolute;
+  backface-visibility: hidden; /*definisce se la parte posteriore di un elemento deve essere visibile o meno di fronte all'utente*/
+}
+
+.fronte {
+  z-index: 1;
+  visibility: visible;
+  transition: all 1s ease-in-out;
+}
+
+.contenuto:hover .fronte {
+  z-index: 0;
+  visibility: hidden;
+}
+
+.asteroide_dex {
+  /*posizione*/
+	float: right;
+  position: relative;
+  top: inherit;
+  right: inherit;
+  /*aspetto*/
+	transform: rotate(3deg); /*rotazione della carta*/
+}
+
+.asteroide_six {
+  /*posizione*/
+	float: left;
+  position: relative;
+  top: inherit;
+  right: inherit;
+  /*aspetto*/
+	transform: rotate(-7deg); /*rotazione della carta*/
+}
+
+.retro {
+	width: 450px;
+  height: 360px;
+	transform: rotateY(180deg);
+}
+
+.retro h3 {
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+	font-size: 60px;
+  color: var(--dark-grey);
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+.bg1 {
+  background-color: #FFF9FF;
+  background-image: url("../images/cardBack/bg1.PNG");
+  background-size: cover;
+}
+
+.bg2 {
+  background-color: #C9F2D2;
+  background-image: url("../images/cardBack/bg2.PNG");
+  background-size: cover;
+}
+
+.bg3 {
+  background-color: #F9EBC2;
+  background-image: url("../images/cardBack/bg3.PNG");
+  background-size: cover;
+}
+
+.bg4 {
+  background-color: #F9AA65;
+  background-image: url("../images/cardBack/bg4.PNG");
+  background-size: cover;
+}
+
+/*contenitore delle singole immagini del puzzle*/
+.div_img {
+  /*aspetto del div*/
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: var(--dark-green);
+  width: calc(100% / 2.5);
+  margin-left: 2.5%;
+  margin-right: 2%;
+}
+
+img {
+  width: 100%;
+  height: 50%;
+}
+
+.div_puzzle { display: flex; }
+
+.nascondi{ visibility: hidden; }
+
+input[type="button"] {
+  /*aspetto bottone*/
+  border-top: 1px solid var(--very-dark-green);
+  background: var(--very-dark-green);
+  background-image: linear-gradient(var(--dark-green), var(--very-dark-green));
+  padding: 11px 22px;
+  border-radius: 8px;
+  box-shadow: var(--dark-grey) 0 1px 0;
+  text-shadow: var(--light-grey) 0 1px 0;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  vertical-align: middle;
+  /*posizione bottone*/
+  margin-left: 2.5%;
+  margin-top: 1%;
+  /*cursore*/
+  cursor: pointer;
+  /*transizioni*/
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="button"]:hover,  input[type="button"]:active{
+  background: var(--very-dark-green);
+}
+
+/*modal*/
+#modal, #modalRegole {
+  /*posizione*/
+  z-index: 3;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  position: fixed;
+  /*aspetto*/
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-grey);
+}
+
+#modal-contenuto, #modal-contenutoRegole {
+  background-color: var(--mostly-white);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  font-size: 200%;
+  font-family: 'Berkshire Swash', cursive;
+  color: black;
+}
+
+#croce, #croce2 {
+  color: var(--dark-grey);
+  float: right;
+  font-size: 30px;
+  /*transizioni*/
+  transition: all 0.3s ease-in-out;
+}
+
+#croce:hover, #croce2:hover{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#comune {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 70%;
+}
+
+p>.fas {
+  font-size: 900%;
+  padding: 10px;
+  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+}
+
+#contenuto {
+  display: flex;
+  justify-content: inherit;
+  flex-wrap: wrap;
+}
+
+.slideshow {
+  position: relative;
+  margin: 2%;
+  margin-left: 5%;
+}
+
+.img_slide {
+  height: inherit;
+  width: inherit;
+}
+
+.no {
+  display: none;
+}
+
+/* Next e previous */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  margin-top: -22px;
+  padding: 15px;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  /*transizioni*/
+  transition: all 0.3s ease-in-out;
+}
+
+.next { /*Posizione di next*/ right: 0; }
+
+.prev:hover, .next:hover {
+  color: var(--dark-green);
+  text-decoration: none;
+}
+
+.didascalia {
+  /*testo*/
+  color: black;
+  text-align: center;
+  /*posizione e dimensione*/
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+}
+
+.numero {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* spiegazioni */
+
+.spiegazione {
+  /*aspetto generale*/
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 1%;
+  box-shadow: 0 4px 2px -3px;
+  text-shadow: var(--light-grey) 0 1px 0;
+  color: #ffffff;
+  font-size: 17px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  /*sfondo*/
+  background-image: linear-gradient( var(--dark-green), var(--very-dark-green));
+  /*bordo*/
+  border:outset 1px var(--very-dark-green);
+  border-top-left-radius:75px;
+  border-bottom-right-radius:75px;
+  /*posizione*/
+  position: absolute;
+  margin: 2%;
+  margin-top: 4%;
+}
+
+.social {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  /*transizioni*/
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-facebook-f {
+  background: #3B5998;
+  color: white;
+  border: 2px solid white;
+}
+.fa-facebook-f:hover {
+  background: white;
+  color: #3B5998;
+  border: 2px solid #3B5998;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  border: 2px solid white;
+}
+.fa-twitter:hover {
+  background: white;
+  color: #55ACEE;
+  border: 2px solid #55ACEE;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  border: 2px solid white;
+}
+.fa-youtube:hover {
+  background: white;
+  color: #bb0000;
+  border: 2px solid #bb0000;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+  border: 2px solid white;
+}
+.fa-instagram:hover {
+  background: white;
+  color: #125688;
+  border: 2px solid #125688;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+  border: 2px solid white;
+}
+.fa-tumblr:hover {
+  background: white;
+  color: #2c4762;
+  border: 2px solid #2c4762;
+}
+
+.fa-reddit-alien {
+  background: #ff5700;
+  color: white;
+  border: 2px solid white;
+}
+.fa-reddit-alien:hover {
+  background: white;
+  color: #ff5700;
+  border: 2px solid #ff5700;
+}
+
+.aCapo {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 800px) {
+
+  /*pagina personaggi*/
+  #contenuto { flex-direction: column; }
+
+  .next { left: 400px; }
+
+  .slideshow { margin-left: 20%; }
+
+  .spiegazione {
+    /*aspetto generale*/
+    padding-top: 2%;
+    padding-left: 4%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    font-size: 15px;
+    /*posizione*/
+    margin-top: 2%;
+
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  h1 {
+    /*dimensione*/
+    width: 100%;
+    font-size: 250%;
+    /*bordi*/
+    border-bottom: 2.5px solid  var(--dark-grey);
+    border-top: 2.5px solid  var(--dark-grey);
+    /*aspetto*/
+    letter-spacing: 1.5px;
+  }
+
+  /*menù in alto*/
+  #nav a {
+    /*dimensione*/
+    width: 100%;
+    /*posizione*/
+    z-index: 2;
+    position: sticky;
+    /*flex*/
+    display: flex;
+    flex-wrap: wrap;
+    /*aspetto*/
+    border-radius: 0;
+    transition: 0s;
+    padding: 15px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+  }
+
+  #nav a:hover {
+    filter:hue-rotate( 50deg ) brightness( 105% );
+    text-decoration: underline;
+  }
+
+  #home, #personaggi, #ambientazioni, #giochiamo, #about { top: 0px;}
+
+  .menu { visibility: visible; }
+
+  .mini  {
+    position: absolute;
+    z-index: 3;
+    top: 90px;
+    right: 15px;
+    /*aspetto*/
+    visibility: visible;
+    font-size: 25px;
+    color: var(--light-green);
+    opacity: 0.7;
+    transition: color 0.5s ease-in-out;
+    /*sfondo*/
+    background-color: var(--very-dark-green);
+    padding: 2%;
+    border-radius: 50%;
+  }
+
+  .miniTimes {
+    /*posizione*/
+    position: absolute;
+    z-index: 3;
+    top: 5px;
+    right: 5px;
+    /*aspetto*/
+    visibility: visible;
+    font-size: 40px;
+    color: white;
+    transition: color 0.5s ease-in-out;
+  }
+
+  .nascondiMenu { display: none; }
+
+  /*Timeline*/
+  .testo_contenitori {
+    display: inline;
+    font-size: 80%;
+    }
+
+  .content:hover .testo_contenitori {
+    display: inline;
+    -webkit-animation: none;
+    -moz-animation: none;
+  }
+
+  /* Sposto la linea */
+  .timeline::after { left: 31px; }
+
+  /* Ingrandisco i contenitori */
+  .contenitore {
+    width: 90%;
+    padding-left: 55px;
+    padding-right: 25px;
+  }
+
+  /* Aggiustare la posizione dei pallini */
+  .sinistra::after, .destra::after {
+    left: 15px;
+  }
+
+  /*Aggiusto sulla linea i contenitori che si trovavano a sinistra*/
+  .sinistra { left: 0px; }
+
+  /* Spostare i contenitori */
+  .destra { left: 0%; }
+
+  /*immagini contenute nella timeline*/
+  .contenuto_timeline {
+    padding-left: 5%;
+    height: 80%;
+    width: 80%;
+  }
+
+  #basso_sinistra {
+    /*dimensione*/
+    height: 0px;
+    width: 0px;
+    min-height: 0px;
+    min-width: 0px;
+  }
+
+  #basso_destra {
+    /*dimensione*/
+    height: 50%;
+    width: 100%;
+  }
+
+ /*pagina ambientazione*/
+  .asteroide_dex {
+    padding right: 15%;
+    float: left;
+    transform: rotate(1deg); /*rotazione della carta*/
+    margin: 5%;
+  }
+
+  .asteroide_six {
+    padding-left: 15%;
+    float: left;
+    transform: rotate(-2deg); /*rotazione della carta*/
+  }
+
+  /*pagina puzzle*/
+
+  .div_puzzle { flex-direction: column; }
+
+  .div_img {
+    width: 95%;
+    margin-bottom: 1%;
+  }
+
+  blockquote {
+    /*aspetto*/
+    font-size: 155%;
+    line-height: 1.4;
+  }
+
+  article > p { font-size: 100%; }
+
+  /*slideshow*/
+
+  .slideshow { margin-left: 13%; }
+
+  .img_slide {
+    height: inherit;
+    width: inherit;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  h1 {
+    width: 100%;
+    font-size: 200%;
+  }
+
+  h2 { font-size: 125%; }
+
+  p { font-size: 15px; }
+
+  /*pagina ambientazione*/
+  .asteroide_dex {
+    padding-left: 0px;
+    float: left;
+    left: 2%;
+    transform: rotate(-1deg); /*rotazione della carta*/
+    margin: 0px;
+    margin-bottom: 5%;
+    margin-left: 4%;
+  }
+
+  .asteroide_six {
+    padding-left: 0px;
+    float: left;
+    transform: rotate(1deg); /*rotazione della carta*/
+    margin: 0px;
+    margin-bottom: 5%;
+    margin-left: 4%;f
+  }
+
+  /*pagina personaggi*/
+  .slideshow {
+    margin-left: 2%;
+  }
+
+  .spiegazione { font-size: 20px; }
+
+  .mini {
+    padding: 3%;
+    font-size: 20px;
+  }
+
+  #up {
+    font-size: 40px;
+  }
+
+  article > p { font-size: 85%; }
+
+  blockquote {
+    /*aspetto*/
+    font-size: 140%;
+    line-height: 1.2;
+  }
+
+  blockquote:first-of-type {
+      margin-top: 10%;
+      margin-right: 10%;
+  }
+
+  .icon {
+    /*aspetto*/
+    padding: 5px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 45px;
+    /*testo*/
+    font-size: 25px;
+  }
+
+  .social {
+    padding: 15px;
+    font-size: 25px;
+    width: 25px;
+  }
+}

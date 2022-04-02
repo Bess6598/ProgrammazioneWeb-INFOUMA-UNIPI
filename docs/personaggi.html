@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <title>Il piccolo principe</title>
+
+    <meta charset="utf-8">
+    <meta name=”description” content="Pagina sui personaggi presenti nella storia del piccolo principe">
+    <meta name=”keywords” content="piccolo principe Antoine Saint Euxpery rosa aviatore">
+    <meta name="author" content="Carolina Sgherri">
+
+    <link rel="shortcut icon" type="image/png" href="./icon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <!--icone-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <script src="funzioni.js"></script>
+  </head>
+
+  <body>
+    <!--Menù barre laterali-->
+    <nav id="nav">
+      <a href="home.html"           id="home"          class="deselezionata">
+        <span class="menu" >Home <i class="fas fa-home"></i> </span>
+      </a>
+      <a href="personaggi.html"     id="personaggi"    class="selezionata">
+        <span class="menu" >Personaggi</span>
+      </a>
+      <a href="ambientazioni.html"  id="ambientazioni" class="deselezionata">
+        <span class="menu" >Ambientazioni</span>
+      </a>
+      <a href="giochiamo.html"      id="giochiamo"     class="deselezionata">
+        <span class="menu" >Puzzle <i class="fas fa-puzzle-piece"></i> </span>
+      </a>
+      <a href="about.html"          id="about"         class="deselezionata">
+        <span class="menu" >About</span>
+      </a>
+    </nav>
+
+    <!--Per aprire il menù quando la pagina è piccola-->
+    <a href="#nav"> <i id="mini" class="fas fa-bars mini"></i></a>
+
+    <div id="contenuto">
+
+      <h1>Personaggi</h1>
+
+      <div class="slideshow">
+
+      <div class="slide" id="aviatore">
+        <div class="numero">1 / 11</div>
+        <img class="img_slide" src="./images/personaggi/aviatore.jpg" alt="Aviatore">
+        <div class="didascalia">
+          <h2>L&#180;aviatore</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="geografo">
+        <div class="numero">2 / 11</div>
+        <img class="img_slide" src="./images/personaggi/geografo.jpg" alt="Geografo">
+        <div class="didascalia">
+          <h2>Il Geografo</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="lampionaio">
+        <div class="numero">3 / 11</div>
+        <img class="img_slide" src="./images/personaggi/lampionaio.jpg" alt="Lampionaio">
+        <div class="didascalia">
+          <h2>Il lampionaio</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="piccolo_principe">
+        <div class="numero">4 / 11</div>
+        <img class="img_slide" src="./images/personaggi/piccolo_principe.jpg" alt="Piccolo principe">
+        <div class="didascalia">
+          <h2>Il piccolo principe</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="re">
+        <div class="numero">5 / 11</div>
+        <img class="img_slide" src="./images/personaggi/re.jpg" alt="Re">
+        <div class="didascalia">
+          <h2>Il re</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="rosa">
+        <div class="numero">6 / 11</div>
+        <img class="img_slide" src="./images/personaggi/rosa.jpg" alt="Rosa">
+        <div class="didascalia">
+          <h2>La rosa</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="serpente">
+        <div class="numero">7 / 11</div>
+        <img class="img_slide" src="./images/personaggi/serpente.jpg" alt="Serpente">
+        <div class="didascalia">
+          <h2>Il Serpente</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="ubriacone">
+        <div class="numero">8 / 11</div>
+        <img class="img_slide" src="./images/personaggi/ubriacone.jpg" alt="Ubriacone">
+        <div class="didascalia">
+          <h2>L&#180;ubriacone</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="uomo_daffari">
+        <div class="numero">9 / 11</div>
+        <img class="img_slide" src="./images/personaggi/uomo_daffari.jpg" alt="Uomo d'affari">
+        <div class="didascalia">
+          <h2>L&#180;uomo d&#180;affari</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="vanitoso">
+        <div class="numero">10 / 11</div>
+        <img class="img_slide" src="./images/personaggi/vanitoso.jpg" alt="Vanitoso">
+        <div class="didascalia">
+          <h2>Il vanitoso</h2>
+        </div>
+      </div>
+
+      <div class="slide no" id="volpe">
+        <div class="numero">11 / 11</div>
+        <img class="img_slide" src="./images/personaggi/volpe.jpg" alt="Volpe">
+        <div class="didascalia">
+          <h2>La volpe</h2>
+        </div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a id="prev" class="prev">&#9664;</a>
+      <a id="next" class="next">&#9654;</a>
+
+    </div>
+
+      <div id="spiegazioni">
+
+      <div id="aviatore_spiegazione" class="spiegazione">
+        <p>
+          Nonostante sia un adulto ha ancora l&#180;animo di un bambino e per
+          questo capisce il vero significato delle cose che il Piccolo Principe
+          gli racconta. L&#180;intera storia &#232; raccontata dall&#180;aviatore che incontra il
+          piccolo principe precipitando con il suo aereo nel deserto del Sahara.
+        </p>
+      </div>
+
+      <div id="geografo_spiegazione" class="spiegazione no">
+        <p>
+          Il geografo &#232; un uomo anziano che passa il suotempo a scivere in grossi
+          libri le informazioni degli esploratori che vanno a fargli visita.
+          Dice di essere &ldquo;una persona troppo importante&rdquo; e per questo non visita
+          mai nessuno dei posti di cui scrive nei suoi grandi libri
+          &#200; il geografo a consigliare al Piccolo Principe di visitare la Terra.
+        </p>
+      </div>
+
+      <div id="lampionaio_spiegazione" class="spiegazione no">
+        <p>
+          Il lavoro del lampionaio consiste nell&#180;accendere il suo lampione
+          quando tramonta il sole e spegnerlo al mattino, ma l&#180;asteroide
+          su cui vive gira sempre pi&#249; velocemente costringendolo ad accendere
+          e spegnere continuamente il lampione.
+        </p>
+      </div>
+
+      <div id="piccolo_principe_spiegazione" class="spiegazione no">
+        <p>
+          Un bambino biondo che viaggia nello spazio alla ricerca di altri mondi.
+          Vive sull&#180;asteroide B612 insieme alla sua rosa e a tre vulcani.
+          &#201; molto curioso e per questo fa molte domande.
+        </p>
+      </div>
+
+      <div id="re_spiegazione" class="spiegazione no">
+        <p>
+          Il re vorrebbe regnare su tutto, ma il suo potere si ferma al suo
+          asteroide che ha come unico abitante un topolino che il re dice di
+          sentire la notte. Per non essere mai contraddetto il re d&#224; come ordini
+          cose che accedrebbero comunque. Il Piccolo Principe non si lascia per&#242;
+          ingannare dal suo comportamento e nonostante il re gli ordini
+          altrimenti decide di lasciare l&#180;asteroide.
+        </p>
+      </div>
+
+      <div id="rosa_spiegazione" class="spiegazione no">
+        <p>
+          La rosa che vive su un asteroide insieme al piccolo principe ed &#232; delicata e molto vanitosa.
+          Il Piccolo Principe se ne prende cura proteggendola dai bachi e innaffiandola.
+          Quando il Piccolo Principe scopre il roseto capisce che la rosa non &#232; speciale perch&#233; unica ma, perch&#233; le vuole bene.
+        </p>
+      </div>
+
+      <div id="serpente_spiegazione" class="spiegazione no">
+        <p>
+          Il piccolo principe &#232; deciso a tornare dalla suo rosa, ma deve lasciare
+          il suo corpo sulla terra per farlo. Il serpente lo aiuta mordendolo
+          &ldquo;Sembrer&#242; morto, ma non sar&#224; vero … Capisci? &#200; troppo lontano.
+          Non posso portare appresso il mio corpo. &#200; troppo pesante.
+          Ma sar&#224; come una vecchia scorza abbandonata.&rdquo;
+        </p>
+      </div>
+
+      <div id="ubriacone_spiegazione" class="spiegazione no">
+        <p>
+          L’ubriacone condivide il suo asteroide solamente con delle bottiglie
+          e passa il suo tempo a bere per dimenticarsi che si vergogna di bere.
+          Il Piccolo Principe vorrebbe provare ad aiutare questo uomo triste
+          ma l’ubriacone si chiude nel silenzio della sua tristezza.
+        </p>
+      </div>
+
+      <div id="uomo_daffari_spiegazione" class="spiegazione no">
+        <p>
+          L’uomo d’affari &#232; sempre occupato a contare le stelle che dice di possedere
+          e scrive il loro numero su un foglio vorrebbe depositare in banca.
+          Il Piccolo Principe gli racconta di come per lui &quot;possedere&ldquo; significhi
+          essere utili a ci&#242; che si possiede, parlandogli della sua rosa.
+          L’uomo d’affari rimane sorpreso dall&#180;affetto del piccolo principe
+          per un semplice fiore.
+        </p>
+      </div>
+
+      <div id="vanitoso_spiegazione" class="spiegazione no">
+        <p>
+          Il vanitoso crede di essere il pi&#249; bello e intelligente del suo pianeta
+          e nonostante ne sia l’unico abitante ama essere ammirato e applaudito.
+          Il Piccolo Principe rimane confuso dalla sua vanit&#224;.
+        </p>
+      </div>
+
+      <div id="volpe_spiegazione" class="spiegazione no">
+        <p>
+          Insegna al Piccolo Principe il vero valore dell&#180;amicizia.
+          Vuole essere addomestcata per far s&#236; che il piccolo principe si
+          ricordi di lei anche quando non saranno pi&#249; insieme.
+        </p>
+      </div>
+
+    </div>
+
+    </div>
+
+  </body>
+
+</html>
